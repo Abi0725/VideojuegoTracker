@@ -7,13 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import com.miranda.videojuegotracker.R
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-
 
 class NewGameFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,8 +30,7 @@ class NewGameFragment : Fragment() {
         fun newInstance(param1: String, param2: String) =
             NewGameFragment().apply {
                 arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+
                 }
             }
     }
