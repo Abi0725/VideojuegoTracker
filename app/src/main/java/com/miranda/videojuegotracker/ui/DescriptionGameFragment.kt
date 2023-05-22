@@ -5,33 +5,34 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.miranda.videojuegotracker.R
+import androidx.fragment.app.activityViewModels
+import com.miranda.videojuegotracker.ui.viewmodel.GameViewModel
 
 
 class DescriptionGameFragment : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-
-        }
+    private val gameViewModel: GameViewModel by activityViewModels {
+        GameViewModel.Factory
     }
+
+    private lateinit var binding: FragmentDescriptionGameBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_description_game, container, false)
+    ): View {
+        binding = FragmentDescriptionGameBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
-    companion object {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        fun newInstance(param1: String, param2: String) =
-            DescriptionGameFragment().apply {
-                arguments = Bundle().apply {
-
-                }
-            }
+        setViewModel()
     }
+
+    private fun setViewModel() {
+        binding.viewmodel = gameViewModel
+    }
+
 }

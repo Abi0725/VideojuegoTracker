@@ -6,8 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.miranda.videojuegotracker.ui.viewmodel.GameViewModel
-
 
 class NewGameFragment : Fragment() {
 
@@ -20,8 +20,8 @@ class NewGameFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        binding = FragementNewGameBinding.inflate(inflater, container, false)
+    ): View {
+        binding = FragmentNewGameBinding.inflate(inflater, container, false)
         return binding.root
     }
 

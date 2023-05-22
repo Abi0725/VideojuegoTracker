@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.miranda.videojuegotracker.R
 import com.miranda.videojuegotracker.data.model.GameModel
+import com.miranda.videojuegotracker.ui.game.recyclerview.GameRecyclerViewAdapter
 import com.miranda.videojuegotracker.ui.viewmodel.GameViewModel
 
 class GameFragment : Fragment() {
@@ -19,7 +20,7 @@ class GameFragment : Fragment() {
 
     private lateinit var adapter: GameRecyclerViewAdapter
 
-    private lateinit var binding: FragmentGamedBinding
+    private lateinit var binding: FragmentGameBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
