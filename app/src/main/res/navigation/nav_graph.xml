@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/gameFragment"
-        android:name="com.miranda.videojuegotracker.ui.GameFragment"
+        android:name="com.miranda.videojuegotracker.ui.game.GameFragment"
         android:label="fragment_game"
         tools:layout="@layout/fragment_game" >
         <action
@@ -24,7 +24,7 @@
         tools:layout="@layout/fragment_description_game" />
     <fragment
         android:id="@+id/newGameFragment"
-        android:name="com.miranda.videojuegotracker.ui.NewGameFragment"
+        android:name="com.miranda.videojuegotracker.ui.newgame.NewGameFragment"
         android:label="fragment_new_game"
         tools:layout="@layout/fragment_new_game" />
 </navigation>
